@@ -4,7 +4,8 @@
  * and open the template in the editor.
  */
 
-package my.concrete;
+package myinterface;
+
 
 /**
  *
@@ -29,6 +30,11 @@ public class SalaryPlusCommissionEmployee  extends SalariedEmployee{
 
     public void setPercentCommision(double percentCommision) {
         this.percentCommision = percentCommision;
+    }
+    
+    @Override
+    public double getYearlySalary() {
+        return this.getSalary()+(sales*percentCommision);
     }
     
     

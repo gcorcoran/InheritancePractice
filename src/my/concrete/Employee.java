@@ -12,19 +12,35 @@ package my.concrete;
  */
 public class Employee{
     
-    private String name;
+    private String lastName;
+    private String firstName;
+    private int SSN;
 
-    public Employee(String name) {
-        this.name = name;
+    public String getLastName() {
+        return lastName;
     }
 
-    public String getName() {
-        return name;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public String getFirstName() {
+        return firstName;
     }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public int getSSN() {
+        return SSN;
+    }
+
+    public void setSSN(int SSN) {
+        this.SSN = SSN;
+    }
+
+    
     
     
     

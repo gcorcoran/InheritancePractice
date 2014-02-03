@@ -4,17 +4,21 @@
  * and open the template in the editor.
  */
 
-package myabstract;
+package myinterface;
+
+
 
 /**
  *
  * @author Greg
  */
-public abstract class Employee {
+public class HourlyEmployee implements Employee{
     
     private String firstName;
     private String lastName;
     private int SSN;
+    private double hoursWorked;
+    private double hourlyRate;
 
     public String getFirstName() {
         return firstName;
@@ -40,5 +44,29 @@ public abstract class Employee {
         this.SSN = SSN;
     }
 
+    public double getHoursWorked() {
+        return hoursWorked;
+    }
+
+    public void setHoursWorked(double hoursWorked) {
+        this.hoursWorked = hoursWorked;
+    }
+
+    public double getHourlyRate() {
+        return hourlyRate;
+    }
+
+    public void setHourlyRate(double hourlyRate) {
+        this.hourlyRate = hourlyRate;
+    }
+
+    @Override
+    public double getYearlySalary() {
+        return hoursWorked*hourlyRate*52; 
+    }
+    
+    
+    
+    
     
 }
